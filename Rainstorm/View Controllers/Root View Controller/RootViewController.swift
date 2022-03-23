@@ -65,11 +65,12 @@ final class RootViewController: UIViewController {
     }
     
     private func fetchWeatherData() {
-        guard let baseUrl = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=9.0&exclude=minutely,alerts,hourly&lon=1.2&appid=96c1d443fdd0fbe9d24370ca1c886d26") else {
-            return
-        }
+    
+        // create url
+        let weatherRequest = WeatherRequest(baseUrl: WeatherService.authenticatedBaseURl)
         
-        URLSession.shared.dataTask(with: baseUrl) { data, response, error in
+        // Create Data Task
+        URLSession.shared.dataTask(with: weatherRequest.url) { data, response, error in
             if let error = error {
                 print(error)
             } else if let response = response {
