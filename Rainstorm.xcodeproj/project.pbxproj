@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B43C0E8D27EB789300230DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C0E8C27EB789300230DCD /* AppDelegate.swift */; };
 		B43C0E8F27EB789300230DCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C0E8E27EB789300230DCD /* SceneDelegate.swift */; };
-		B43C0E9127EB789300230DCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C0E9027EB789300230DCD /* ViewController.swift */; };
+		B43C0E9127EB789300230DCD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C0E9027EB789300230DCD /* RootViewController.swift */; };
 		B43C0E9427EB789300230DCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43C0E9227EB789300230DCD /* Main.storyboard */; };
 		B43C0E9627EB789700230DCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43C0E9527EB789700230DCD /* Assets.xcassets */; };
 		B43C0E9927EB789700230DCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43C0E9727EB789700230DCD /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		B43C0E8927EB789300230DCD /* Rainstorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rainstorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43C0E8C27EB789300230DCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B43C0E8E27EB789300230DCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B43C0E9027EB789300230DCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B43C0E9027EB789300230DCD /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B43C0E9327EB789300230DCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B43C0E9527EB789700230DCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B43C0E9827EB789700230DCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,63 @@
 		B43C0E8B27EB789300230DCD /* Rainstorm */ = {
 			isa = PBXGroup;
 			children = (
-				B43C0E8C27EB789300230DCD /* AppDelegate.swift */,
-				B43C0E8E27EB789300230DCD /* SceneDelegate.swift */,
-				B43C0E9027EB789300230DCD /* ViewController.swift */,
-				B43C0E9227EB789300230DCD /* Main.storyboard */,
-				B43C0E9527EB789700230DCD /* Assets.xcassets */,
-				B43C0E9727EB789700230DCD /* LaunchScreen.storyboard */,
-				B43C0E9A27EB789700230DCD /* Info.plist */,
+				B43C0EA527EB7CF000230DCD /* SupportingFiles */,
+				B43C0EA427EB7CD600230DCD /* Resources */,
+				B43C0EA327EB7CBE00230DCD /* Storyboards */,
+				B43C0EA127EB79C300230DCD /* View Controllers */,
+				B43C0EA027EB798700230DCD /* Application Delegate */,
 			);
 			path = Rainstorm;
+			sourceTree = "<group>";
+		};
+		B43C0EA027EB798700230DCD /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				B43C0E8C27EB789300230DCD /* AppDelegate.swift */,
+				B43C0E8E27EB789300230DCD /* SceneDelegate.swift */,
+			);
+			path = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		B43C0EA127EB79C300230DCD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B43C0EA227EB7B3C00230DCD /* Root View Controller */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B43C0EA227EB7B3C00230DCD /* Root View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B43C0E9027EB789300230DCD /* RootViewController.swift */,
+			);
+			path = "Root View Controller";
+			sourceTree = "<group>";
+		};
+		B43C0EA327EB7CBE00230DCD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B43C0E9227EB789300230DCD /* Main.storyboard */,
+				B43C0E9727EB789700230DCD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B43C0EA427EB7CD600230DCD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B43C0E9527EB789700230DCD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B43C0EA527EB7CF000230DCD /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B43C0E9A27EB789700230DCD /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B43C0E9127EB789300230DCD /* ViewController.swift in Sources */,
+				B43C0E9127EB789300230DCD /* RootViewController.swift in Sources */,
 				B43C0E8D27EB789300230DCD /* AppDelegate.swift in Sources */,
 				B43C0E8F27EB789300230DCD /* SceneDelegate.swift in Sources */,
 			);
@@ -291,10 +339,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6CJ98NSPAD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Rainstorm/Info.plist;
+				INFOPLIST_FILE = Rainstorm/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,7 +355,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,10 +368,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6CJ98NSPAD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Rainstorm/Info.plist;
+				INFOPLIST_FILE = Rainstorm/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +384,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
