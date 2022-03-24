@@ -10,6 +10,17 @@ import UIKit
 final class RootViewController: UIViewController {
     
     // MARK: - Properties
+    
+    var viewModel: RootViewModel? {
+        didSet {
+            guard let viewModel = viewModel else {
+                return
+            }
+            
+            setupViewModel(with: viewModel)
+        }
+    }
+    
     private let dayViewController: DayViewController = {
         guard let dayViewController = UIStoryboard.main.instantiateViewController(withIdentifier: DayViewController.stringIdentifier) as? DayViewController else {
             fatalError("Unable to Instantiate Day View Controller")
@@ -37,8 +48,6 @@ final class RootViewController: UIViewController {
         
         // Setup Child View Controller
         setupViewChildViewControllers()
-        
-        fetchWeatherData()
     }
     
     // MARK: - Helper Methods
@@ -64,20 +73,15 @@ final class RootViewController: UIViewController {
         weekViewController.didMove(toParent: self)
     }
     
-    private func fetchWeatherData() {
-    
-        // create url
-        let weatherRequest = WeatherRequest(baseUrl: WeatherService.authenticatedBaseURl)
-        
-        // Create Data Task
-        URLSession.shared.dataTask(with: weatherRequest.url) { data, response, error in
+    func setupViewModel(with viewModel: RootViewModel) {
+        viewModel.didFetchWeatherData = { (data, error) in
             if let error = error {
-                print(error)
-            } else if let response = response {
-                print(response)
+                print("unable to fetch weather data \(error)")
+            } else if let data = data {
+                print(data)
             }
-        }.resume()
-//        let authenticatedBaseUrl = baseUrl.appendingPathComponent("96c1d443fdd0fbe9d24370ca1c886d26")
+            
+        }
     }
 
 }
