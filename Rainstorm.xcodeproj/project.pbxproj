@@ -20,6 +20,7 @@
 		B43C0EB427EBC5E600230DCD /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C0EB327EBC5E600230DCD /* WeatherRequest.swift */; };
 		B43C0EB727EBC83200230DCD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C0EB627EBC83200230DCD /* Configuration.swift */; };
 		B43C0EBA27EBD06700230DCD /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C0EB927EBD06700230DCD /* RootViewModel.swift */; };
+		B43C0EBC27EC9EDA00230DCD /* OpenWeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C0EBB27EC9ED800230DCD /* OpenWeatherResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B43C0EB327EBC5E600230DCD /* WeatherRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
 		B43C0EB627EBC83200230DCD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		B43C0EB927EBD06700230DCD /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		B43C0EBB27EC9ED800230DCD /* OpenWeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				B43C0EB327EBC5E600230DCD /* WeatherRequest.swift */,
+				B43C0EBB27EC9ED800230DCD /* OpenWeatherResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				B43C0EBA27EBD06700230DCD /* RootViewModel.swift in Sources */,
 				B43C0EB427EBC5E600230DCD /* WeatherRequest.swift in Sources */,
 				B43C0EAC27EB827C00230DCD /* WeekViewController.swift in Sources */,
+				B43C0EBC27EC9EDA00230DCD /* OpenWeatherResponse.swift in Sources */,
 				B43C0E9127EB789300230DCD /* RootViewController.swift in Sources */,
 				B43C0EB727EBC83200230DCD /* Configuration.swift in Sources */,
 				B43C0EAF27EBACD100230DCD /* UIViewController.swift in Sources */,
