@@ -49,13 +49,13 @@ struct Weather: Codable {
 
 // MARK: - Daily
 struct Daily: Codable {
-    let dt : Int
+    let time : Int
     let temp: Temp
     let windSpeed: Double
     let weather: [Weather]
 
     enum CodingKeys: String, CodingKey {
-        case dt
+        case time = "dt"
         case temp
         case windSpeed = "wind_speed"
         case weather
